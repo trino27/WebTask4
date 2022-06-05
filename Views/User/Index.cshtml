@@ -1,0 +1,14 @@
+﻿@using PresentationLayer.Models;
+@using DataLayer.Enums;
+@model UserViewModel
+
+
+@if (Model is UserViewModel)
+{
+    var _currentModel = (UserViewModel)Model;
+    <h1>@_currentModel.User.Name</h1>
+    <p>@Html.Raw(_currentModel.User.Email)</p>
+    <ul>
+    </ul>
+}
+

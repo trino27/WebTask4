@@ -1,0 +1,47 @@
+﻿@using PresentationLayer.Models;
+@using DataLayer.Enums;
+
+@model List<UserViewModel>
+@{
+    ViewData["Title"] = "Home User";
+}
+///"Main User" 
+ @*//<a asp-action="UserEditor" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User"> - edit</a>*@
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <h2>
+                        <a asp-action="Index" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User">@item.User.Name</a>
+                    </h2>
+                </li>
+                <li>
+                    <h2>
+                        <a asp-action="Index" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User">@item.User.Email</a>
+                        
+                    </h2>
+                </li>
+                <li>
+                    <h2>
+                        <a asp-action="Index" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User">@item.User.CreateOf</a>
+                    </h2>
+                </li>
+                <li>
+                    <h2>
+                        <a asp-action="Index" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User">@item.User.LoggedAt</a>
+                    </h2>
+                </li>
+                <li>
+                    <h2>
+                        <a asp-action="Index" asp-controller="User" asp-route-pageId="@item.User.Id" asp-route-pageType="@DataEnums.UserType.User">@item.User.isBlock</a>
+                    </h2>
+                </li>
+            }
+            <li>
+                <a asp-action="UserEditor" asp-controller="User" asp-route-pageId="0" asp-route-pageType="@DataEnums.UserType.User">Registration</a>
+            </li>
+        </ul>
+    </div>
+</div>

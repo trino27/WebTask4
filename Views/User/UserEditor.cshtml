@@ -1,0 +1,23 @@
+﻿@using PresentationLayer.Models;
+@using DataLayer.Enums;
+@using System
+@model UserEditModel
+@if (Model is UserEditModel) 
+{
+    var _currentModel = (UserEditModel)Model;
+<form action="/User/SaveUser" method="post">
+    <input type="hidden" value="@ViewBag.UserType" name="UserType" />
+
+    <h1>Registration</h1>
+    <input name="Id" type="hidden" value="@_currentModel.Id" />
+    @*<input name="CreateOf" type="hidden" value="@DateTime.Now />*@
+
+    <input name="Name" value="@_currentModel.Name" />Name
+    <input name="Email" value="@_currentModel.Email" />Email
+    <input name="Pass" value="@_currentModel.Pass" />Pass
+    <input name="Pass" value="@_currentModel.Pass" />Repeate Pass
+
+
+    <input type="submit" />
+</form>
+}
