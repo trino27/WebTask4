@@ -17,7 +17,7 @@ namespace Task4_web.Controllers
 {
     public class HomeController : Controller
     {
-       
+        
         private DataManager _datamanager;
         private ServicesManager _servicesmanager;
         public HomeController(DataManager dataManager)
@@ -34,18 +34,10 @@ namespace Task4_web.Controllers
             return View(_dirs);
         }
 
-        public IActionResult About()
+        [HttpGet]
+        public IActionResult UserLogin(string userEmail, string userPass) // !!!
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return UserLogin(userEmail, userPass);
         }
 
         public IActionResult Error()

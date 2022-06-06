@@ -6,6 +6,7 @@ using BuissnesLayer;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer;
 using PresentationLayer.Models;
+using PresentationLayer.Services;
 using static DataLayer.Enums.DataEnums;
 
 namespace Task4_web.Controllers
@@ -54,7 +55,9 @@ namespace Task4_web.Controllers
         public IActionResult SaveUser(UserEditModel model)
         {
             _servicesmanager.Users.SaveUserEditModelToDb(model);
-            return RedirectToAction("UserEditor", "User", new { pageId = model.Id, pageType=UserType.User });
+            return RedirectToAction("UserEditor", "User", new { pageId = model.Id, pageType = UserType.User });
         }
+
+        
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTask4", "WebTask4.csproj", "{94322A0F-0B34-40B7-B62E-971A78EE18F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTask4", "WebTask4.csproj", "{94322A0F-0B34-40B7-B62E-971A78EE18F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "..\DataLayer\DataLayer.csproj", "{25237213-997B-4985-94D5-E4B32B16FAEA}"
 EndProject

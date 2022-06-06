@@ -1,0 +1,18 @@
+﻿@using PresentationLayer.Models;
+@using DataLayer.Enums;
+@using System
+@model UserEnterModel
+@if (Model is UserEnterModel)
+{
+    var _currentModel = (UserEnterModel)Model;
+    <form action="/User/SaveUser" method="post">
+        <input type="hidden" value="@ViewBag.UserType" name="UserType" />
+
+        <h1>Login</h1>
+
+        <input name="Email" value="@_currentModel.Email" />Email
+        <input name="Pass" value="@_currentModel.Pass" />Pass
+
+        <input type="submit" />
+    </form>
+}
